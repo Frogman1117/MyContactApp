@@ -35,4 +35,41 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="AGE"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/editText_NAME"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="51dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_AGE"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignEnd="@+id/editText_NAME"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_alignStart="@+id/editText_NAME" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="ADDRESS"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/editText_AGE"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="51dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_ADDRESS"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_alignEnd="@+id/editText_NAME"
+        android:layout_toEndOf="@+id/textView3" />
+
 </RelativeLayout>
