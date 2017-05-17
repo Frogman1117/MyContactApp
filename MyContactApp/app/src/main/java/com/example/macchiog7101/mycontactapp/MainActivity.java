@@ -1,7 +1,9 @@
 package com.example.macchiog7101.mycontactapp;
 
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -46,9 +48,24 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         StringBuffer buffer = new StringBuffer();
+        for(res.moveToFirst();!res.isAfterLast();res.moveToNext()){
+            for (int i =0;i<res.getColumnCount();i++){
+                buffer.append(res.getString(i) + "   ");
+            }
+            buffer.append("\n");
+        }
         showMessage("Data",buffer.toString());
+        return;
     }
     private void showMessage(String title, String message){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(title).setMessage(message)
+                .setPositiveButton("Close", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
 
+                    }
+                });
+        builder.show();
     }
 }
