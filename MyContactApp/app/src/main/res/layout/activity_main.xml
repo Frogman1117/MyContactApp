@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,16 +14,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="NAME:"
+        android:text="Name:"
         android:id="@+id/textView"
-        android:layout_marginTop="67dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="78dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_NAME"
+        android:id="@+id/editText_Name"
         android:layout_alignTop="@+id/textView"
         android:layout_alignParentEnd="true"
         android:layout_toEndOf="@+id/textView" />
@@ -30,46 +30,74 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="ADD DATA"
         android:id="@+id/button_add"
+        android:clickable="true"
+        android:onClick="addData"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="46dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_Age"
+        android:layout_below="@+id/editText_Name"
+        android:layout_alignEnd="@+id/editText_Name"
+        android:layout_marginTop="57dp"
+        android:layout_toEndOf="@+id/textView" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="AGE"
+        android:text="Age"
         android:id="@+id/textView2"
-        android:layout_below="@+id/editText_NAME"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="51dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText_AGE"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_alignEnd="@+id/editText_NAME"
-        android:layout_toEndOf="@+id/textView2"
-        android:layout_alignStart="@+id/editText_NAME" />
+        android:layout_alignBottom="@+id/editText_Age"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="ADDRESS"
+        android:text="Address:"
         android:id="@+id/textView3"
-        android:layout_below="@+id/editText_AGE"
+        android:layout_below="@+id/textView2"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="51dp" />
+        android:layout_marginTop="42dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_ADDRESS"
+        android:id="@+id/editText_address"
         android:layout_alignTop="@+id/textView3"
-        android:layout_alignEnd="@+id/editText_NAME"
-        android:layout_toEndOf="@+id/textView3" />
+        android:layout_alignEnd="@+id/editText_Age"
+        android:layout_toEndOf="@+id/button_add" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Data"
+        android:id="@+id/button_view"
+        android:layout_alignBottom="@+id/button_add"
+        android:layout_alignParentEnd="true"
+        android:onClick="viewData"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:id="@+id/button_search"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:onClick="searchMessage"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editSearch"
+        android:layout_below="@+id/button_view"
+        android:layout_alignEnd="@+id/editText_address"
+        android:layout_toEndOf="@+id/button_add"
+        android:hint="Name"/>
 </RelativeLayout>
